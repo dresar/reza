@@ -1,0 +1,19 @@
+{
+  "name": "adhd-wearable-iot-root",
+  "version": "1.0.0",
+  "description": "Unified Full-Stack System for ADHD Wearable IoT Multisensor Biofeedback System",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -k -n \"IOT-BACKEND,DASHBOARD\" -c \"cyan.bold,magenta.bold\" \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && npm start",
+    "dev:frontend": "cd mindful-stream-dash && npm run dev",
+    "start": "npm run dev",
+    "build": "cd backend && npm run build && cd ../mindful-stream-dash && npm run build",
+    "predev": "node scripts/kill_ports.js",
+    "kill": "node scripts/kill_ports.js"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

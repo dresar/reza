@@ -1,0 +1,30 @@
+{
+  "name": "adhd-wearable-backend",
+  "version": "1.0.0",
+  "description": "Unified Local IoT Backend with Embedded MQTT Broker, Realtime WebSocket Server, and REST API for ADHD Wearable Multisensor Biofeedback System",
+  "main": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "tsx watch src/index.ts",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "aedes": "^0.51.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mqtt": "^5.15.2",
+    "simple-statistics": "^7.10.1",
+    "winston": "^3.19.0",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.13.4",
+    "@types/ws": "^8.5.14",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.3"
+  }
+}
